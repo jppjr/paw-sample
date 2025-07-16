@@ -1,0 +1,75 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Log Details')/Hierarchies('Log Details')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('Log Location')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('Log File')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('User')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('Level')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('Previous Value')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('Changed Value')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('Cube')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('dim1')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('dim2')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('dim3')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('dim4')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('dim5')"
+					},
+					{
+						"@id":"Dimensions('Log Details')/Hierarchies('Log Details')/Elements('dim6')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Log Count')/Hierarchies('Log Count')"
+				},
+				"Expression":"TM1SubsetAll([Log Count])"
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.#########"
+}

@@ -1,0 +1,90 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+##Log Records brought to you by Ali Duran
+##Before you start, you might want to consider running reset log process by running "Log - Reset Transaction Log Process"
+myCube='Transaction Log';
+getCounter=STRINGTONUMBER(Cellgets('Calendar','LogCount','String'));
+counter=getcounter;
+vFile='E:\IBM Demos\Smartco\Logs\';
+
+SaveDataAll;
+LastLogFile = CellGetS( 'Calendar', 'Last Log Processed', 'String' );
+LatestFile = LastLogFile;
+LogFileName = WildcardFileSearch(vFile|'tm1s2*.log', '');
+WHILE ( LogFileName @<> '' );
+   IF ( LogFileName @> LastLogFile );
+      IF ( LogFileName @> LatestFile );
+         LatestFile = LogFileName;
+      ENDIF;
+   ENDIF;
+   LOGFILENAME = WildcardFileSearch(vFile|'tm1s2*.log', LogFileName);
+END;
+IF ( LogFileName @<> LatestFile );
+   CellPutS( LatestFile, 'Calendar', 'Last Log Processed', 'String' );
+ENDIF;
+
+
+DatasourceNameForServer=vFile|LatestFile;
+DatasourceNameForClient=vFile|LatestFile;
+DataSourceType='CharacterDelimited';
+DatasourceASCIIDelimiter=',';
+DatasourceASCIIDecimalSeparator='.';
+DatasourceASCIIQuoteCharacter='"';
+DatasourceASCIIThousandSeparator=',';
+DatasourceASCIIHeaderRecords=0;
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+counter=counter+1;
+counta=NumbertoString(counter );
+
+
+IF (Cube @<>'');
+IF(Counta @<>'');
+IF(User @<>'*');
+
+DimensionElementInsertDirect('Log Count','',counta,'S');
+
+CellPutS(DatasourceNameForServer,myCube,Counta,'Log Location');
+CellPutS(LATESTFILE,myCube,Counta,'Log File');
+CellPutS(Date2,myCube,Counta,'Log Period');
+CellPutS(User,myCube,Counta,'User');
+CellPutS(Level,myCube,Counta,'Level');
+CellPutS(PreviousValue,myCube,Counta,'Previous Value');
+CellPutS(ChangedValue,myCube,Counta,'Changed Value');
+CellPutS(Cube,myCube,Counta,'Cube');
+CellPutS(Dim1,myCube,Counta,'dim1');
+CellPutS(Dim2,myCube,Counta,'dim2');
+CellPutS(Dim3,myCube,Counta,'dim3');
+CellPutS(Dim4,myCube,Counta,'dim4');
+CellPutS(Dim5,myCube,Counta,'dim5');
+CellPutS(Dim6,myCube,Counta,'dim6');
+
+
+ENDIF;
+ENDIF;
+
+ENDIF;
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+CellPutS(Counta,'Calendar','LogCount','String');
+#endregion

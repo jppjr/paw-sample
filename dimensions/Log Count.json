@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"Log Count",
+	"Hierarchies@Code.links":
+	[
+		"Log Count.hierarchies/Log Count.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Log Count')/Hierarchies('Log Count')"
+	}
+}

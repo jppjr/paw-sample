@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"Transaction Log",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Log Count')"
+		},
+		{
+			"@id":"Dimensions('Log Details')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Transaction Log.views/All.json",
+		"Transaction Log.views/Default.json"
+	]
+}

@@ -1,0 +1,5 @@
+﻿FILE_FORMAT=100
+ENTRYNAME=Smartco Income Statement.xlsx
+ENTRYTYPE=blob
+ENTRYREFERENCE=TM1:///blob/PUBLIC/.\}Externals\Smartco Income Statement.xlsx_20170712163401.xlsx
+REMOVEBLOBONDELETE=Yes

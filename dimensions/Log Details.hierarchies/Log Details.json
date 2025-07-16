@@ -1,0 +1,64 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Log Details",
+	"Elements":
+	[
+		{
+			"Name":"Log Location",
+			"Type":"String"
+		},
+		{
+			"Name":"Log File",
+			"Type":"String"
+		},
+		{
+			"Name":"Log Period",
+			"Type":"String"
+		},
+		{
+			"Name":"User",
+			"Type":"String"
+		},
+		{
+			"Name":"Level",
+			"Type":"String"
+		},
+		{
+			"Name":"Previous Value",
+			"Type":"String"
+		},
+		{
+			"Name":"Changed Value",
+			"Type":"String"
+		},
+		{
+			"Name":"Cube",
+			"Type":"String"
+		},
+		{
+			"Name":"dim1",
+			"Type":"String"
+		},
+		{
+			"Name":"dim2",
+			"Type":"String"
+		},
+		{
+			"Name":"dim3",
+			"Type":"String"
+		},
+		{
+			"Name":"dim4",
+			"Type":"String"
+		},
+		{
+			"Name":"dim5",
+			"Type":"String"
+		},
+		{
+			"Name":"dim6",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}
