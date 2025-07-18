@@ -1,4 +1,4 @@
 {
 	"@type":"Subset",
-	"Name":"All Members"
+	"Expression":"[Account Reporting].MEMBERS"
 }
